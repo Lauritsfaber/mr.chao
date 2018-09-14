@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Chao</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            height: 100%
+        }
+
+        body {
+            background-color: #f4f4ef;
+            margin-top: -50px;
+            margin-left: 0%;
+            height: 100%;
+        }
+
+        header {
+            margin-bottom: 2.5em;
+            background-image: url(splash_test.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            top: 100px;
+            margin: 4px;
+            opacity: 0.6;
+            padding: 0px 8px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            font-family: 'Kalam', cursive;
+            font-size: 20px;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        /*
+ button:hover { color: orange; opacity: 1; box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+*/
+
+        h1 {
+            font-family: 'Amatic SC', cursive;
+
+        }
+
+        h2 {
+            font-family: 'Amatic SC', cursive;
+        }
+
+        p {
+            font-family: 'Kalam', cursive;
+        }
+
+        #eventcontainer {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 40px;
+        }
+
+        .ret img {
+            width: 90%;
+            box-shadow: 1px 2px 2px;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width:1225px) {
+            #eventcontainer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width:830px) {
+            #eventcontainer {
+                grid-template-columns: 1fr;
+            }
+            button {
+                width: 100px;
+                height: 25px;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            #eventcontainer {
+                grid-template-columns: 1fr;
+
+            }
+            button {
+                width: 100px;
+                height: 25px;
+            }
+        }
+
+        #modal {
+            width: 70vw;
+            height: 70vh;
+            background: rgba(0, 0, 0, .8);
+            position: fixed;
+            text-align: center;
+
+            opacity: 0;
+            pointer-events: none;
+            transition: 1s;
+        }
+
+        #modal-content {
+            width: 100vw;
+            background: #fff;
+            margin: auto;
+            padding-top: 3em;
+            margin-top: 5em;
+        }
+
+        #modal.vis {
+            opacity: 1;
+            pointer-events: all;
+            transition: 0.5s;
+        }
+
+        #titel h1 {
+            margin-top: 0;
+            padding-top: 1em;
+            font-family: 'Amatic SC', cursive;
+            font-size: 3.5em;
+            margin-bottom: 10em;
+        }
+
+        #side_navn h1 {
+            text-decoration: underline;
+            font-family: 'Amatic SC', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="modal">
+        <div id="modal-content">
+            <button>close</button>
+            <h2 id="modal-navn"></h2>
+            <img id="modal-billede" src="" alt="">
+            <p id="langBeskrivelse"></p>
+            <p id="oprindelse"></p>
+        </div>
+    </div>
+    <header>
+        <div id="navbar">
+            <img id="logoo" src="logo.png" alt="logo">
+
+
+
+            <nav role="navigation">
+                <div id="menuToggle">
+
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>Starters</li>
+                        </a>
+                        <a href="#">
+                            <li>Mains</li>
+                        </a>
+                        <a href="#">
+                            <li>Drinks</li>
+                        </a>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="logo"><b>诶 <span>Mr. </span>Ch<span>ao's </span>传</b></div>
+
+        <!--
+        <nav>
+            <button class="menu-item" data-kategori="alle">Alle</button>
+            <button class="menu-item" data-kategori="forretter">Forretter</button>
+            <button class="menu-item" data-kategori="hovedretter">Hovedretter</button>
+            <button class="menu-item" data-kategori="desserter">Desserter</button>
+            <button class="menu-item" data-kategori="drikkevarer">Drikkevarer</button>
+            <button class="menu-item" data-kategori="sideorders">sideorders</button>
+        </nav>
+-->
+        <div id="titel">
+            <h1></h1>
+        </div>
+        <div id="side_navn">
+            <h1></h1>
+        </div>
+    </header>
+
+    <div class="row">
+        <h1 id="quote">"Talk doesn't cook rice"</h1>
+        <div class="column">
+            <img id="mad" src="mad.jpg" alt="mad">
+        </div>
+        <div class="column">
+            <p>印亮間房……黃名中料我第第，縣推山。明義車係力國林經差功式他，支落是讀效，系中帶該照電。實續專有河蘭。去子年向了聯知精半兩這資人、水空異引，開生說！ 一連經兒業老處存不；靜公天前明我，自想小麼部；學結況個查不不了數建又英心我黑收影的法由體有多想大這公言先當靈牛藝麼視這相覺需人，的臺山特國很照四下無經平有工了東，委常活東教草不子日明把公花動現園沒，腳便。
+            </p>
+        </div>
+    </div>
+
+    <div class="parallax">
+        <div class="centered">The</div>
+        <div class="centered_2">Chinese Way</div>
+    </div>
+
+    <main class="container">
+        <section id="eventcontainer">
+
+        </section>
+    </main>
+
+    <template id="event-template">
+    <article class="ret">
+    <h2 id="data-ret"></h2>
+    <img id="data-billede" src="" alt="">
+    <p id="data-beskrivelse"></p>
+    <p id="data-pris"></p>
+    </article>
+   </template>
+    <footer class="footer-basic-centered">
+
+        <p class="footer-company-motto">"Enjoy yourself. It's later than you think."</p>
+
+        <p class="footer-links">
+            <a href="#">Home</a> ·
+            <a href="#">Maps</a> ·
+            <a href="#">Pricing</a> ·
+            <a href="#">About</a> ·
+            <a href="#">Faq</a> ·
+            <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">Mr. Chao's &copy; 2018</p>
+
+    </footer>
+    <script>
+        let event,
+            modtager = document.querySelector("#eventcontainer"),
+            retFilter = "alle",
+            modal = document.querySelector("#modal");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+
+            //HENT Json
+            let jsonObject = await fetch("menu.json");
+            event = await jsonObject.json();
+            console.log(event);
+
+            visRetter();
+        }
+        //EVENTLISTENERES PÅ ALLE KNAPPER
+        document.querySelectorAll(".menu-item").forEach(knap => {
+            knap.addEventListener("click", filtrering)
+        });
+
+        function filtrering() {
+            modtager.textContent = "";
+            retFilter = this.getAttribute("data-kategori");
+            visRetter();
+            console.log("filter");
+        }
+
+        function visRetter() {
+            let myTemplate = document.querySelector("#event-template");
+            document.querySelector("#side_navn h1").textContent = retFilter;
+            event.forEach(ret => {
+                if (ret.kategori == retFilter || retFilter == "alle") {
+                    console.log(myTemplate);
+
+                    let klon = myTemplate.cloneNode(true).content;
+                    klon.querySelector("#data-ret").textContent = ret.navn;
+                    klon.querySelector("#data-billede").src = "imgs/lille/" + ret.billede + "_l.png";
+                    klon.querySelector("#data-billede").addEventListener("click", () => {
+
+                        visModal(ret);
+                    });
+                    klon.querySelector("#data-beskrivelse").textContent = ret.kortbeskrivelse;
+                    klon.querySelector("#data-pris").textContent = ret.pris + "kr DKK";
+                    modtager.appendChild(klon);
+                }
+
+            });
+        }
+        //Funktioner til at vise og fjerne modal vinduet
+        function visModal(ret) {
+            console.log(ret);
+            modal.classList.add("vis");
+            modal.querySelector("#modal-navn").textContent = ret.navn;
+            modal.querySelector("#modal-billede").src = "imgs/lille/" + ret.billede + "_l.png";
+            modal.querySelector("#modal-billede").alt = "Foto af " + ret.navn;
+            modal.querySelector("#langBeskrivelse").textContent = ret.langbeskrivelse;
+            modal.querySelector("#oprindelse").textContent = ret.oprindelsesregion;
+            modal.querySelector("button").addEventListener("click", skjulModal);
+        }
+
+        function skjulModal() {
+
+            modal.classList.remove("vis");
+            //window.scrollTo(0);
+        }
+    </script>
+</body>
+
+</html>
