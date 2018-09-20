@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. Chaw's</title>
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Kalam|Poor+Story|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
 
     <!--    FAVICON     -->
 
@@ -21,12 +21,9 @@
 </head>
 
 <body>
-    <!-- MODAL VINUDET ER SKJULDT, SOM VISES IGENNEM JS VED EN FUNKTION, NÅR EN RET VÆLGES-->
     <div id="modal">
         <div id="modal-content">
-            <!--BUTTON TIL AT LUKKE MODALVINDUET IGEN-->
             <button>X</button>
-            <!--ELEMENTER I MODALVINUDET DER SKAL HENTES OG VISES VIA JSON OG JS-->
             <h2 id="modal-navn"></h2>
             <img id="modal-billede" src="" alt="">
             <p id="langBeskrivelse"></p>
@@ -35,7 +32,7 @@
     </div>
     <header>
 
-        <!--BURGERMENU-->
+        <!--        BurgerMenu      -->
 
         <div id="navbar">
             <!--LOGO DER SENDER DIG TIL INDEX.HTML VIA HYPERLINK-->
@@ -59,7 +56,7 @@
                         <a href="menu.html">
                             <li>传<br>Menu</li>
                         </a>
-                        <a href="#quote_2">
+                        <a href="index.html#quote_2">
                             <li>落<br>About</li>
                         </a>
 
@@ -68,45 +65,27 @@
             </nav>
         </div>
 
-
-        <div class="logo"><b>诶 <span>Mr. </span>Ch<span>aw's </span>传</b></div>
-
-        <!--TITLER DER BLIVER VIST IGENNEM JS I FUNKTIONEN DER VISER DE FORSKELLIGE KATEGORIEER, DER ER VALGT.-->
-        <div id="side_navn">
-            <h1></h1>
-        </div>
     </header>
 
-    <div class="row">
-        <h1 id="quote">"Talk doesn't cook rice"</h1>
-        <p id="quote_1">支落是</p>
-
-        <div id="about_container_1">
-            <div class="about">
-                <img src="/imgs/mad.png" alt="neon">
-            </div>
-            <div class="about_text">
-                <p>If you’re traveling in a Chinese-speaking country you’ll definitely be eating out and ordering in a Chinese restaurant. In this free lesson the Rocket Chinese team will teach you the basics you need to know so you can enjoy the delicious Chinese cuisine – just listen to the audio and practice saying these Mandarin Chinese words and phrases aloud. When you’re ready, why not try them out on the staff at a local Chinese restaurant? <br> When you go to a restaurant in China, in most cases you can choose the table by yourself. You will only be seated by the waiter or waitress if it is a really fancy restaurant, or it is very busy in the restaurant at that moment and there appear to be no seats available. In some restaurants the menu will be on the table already otherwise the waiter or waitress will bring it over to you as soon as possible. After being greeted you could get asked one of the following questions…</p>
-            </div>
-
-        </div>
-
-
+    <div id="body_nav">
+        <button class="menu-item" data-kategori="everything">Everyting</button>
+        <button class="menu-item" data-kategori="starters">Starters</button>
+        <button class="menu-item" data-kategori="main">Mains</button>
+        <button class="menu-item" data-kategori="drinks">Drinks</button>
+    </div>
+    <div id="side_navn">
+        <h1></h1>
     </div>
 
 
-    <!--PARALLAX EFFEKT PÅ BILLEDE, HVOR MAN SCROLLER VIDERE PÅ SIDEN, MEN BILLEDET STÅR STILLE I DIV'EN.-->
-    <div class="parallax">
-        <div class="centered">The</div>
-        <div class="centered_2">Chinese Way</div>
-    </div>
+
 
     <main class="container">
         <section id="eventcontainer">
+
         </section>
     </main>
 
-    <!--TEMPLATE DER IKKE BLIVER VIST, MEN TIL VISNING IGENNEM JS AF DE FORSKELLIGE RETTER.-->
     <template id="event-template">
     <article class="ret">
     <h2 id="data-ret"></h2>
@@ -115,19 +94,7 @@
     <p id="data-pris"></p>
     </article>
    </template>
-    <h1 class="about_titel">About us</h1>
-    <p id="quote_2">支落是</p>
-    <div id="about_container">
-        <div class="about_text">
-            <p>The owner of Mr. Chaw's restaurant has a mission and a vision that food is not only sweet. When man works with food, it's like working with art. It's a passion man has, where one can get his full creative qualities out in the world. It is about balance and elegance in the food, which we in Mr. Chaw's stand for. <br> The purpose of Mr. Chaw's is to provide guests with an authentic Cantonese dining experience in an eatery that brings our guests back to the old tea houses in South China. <br> We specialize in Dim Sum ranging from meat to vegetarian dumplings. Dim Sum is China's response to tapas, meaning in the direction of "heart's delight" and "touching the heart" - which we want you to listen to when ordering dishes with us.</p>
-            <p> Balance 平衡 Elegance 优雅 Creative Fit Passion 用心 制作 </p>
 
-            <p class="red">Contact Info@mrchaws.dk | Tel.: 33 15 16 07 <br> Dwono Street 22, 1302 Chinatown K <br> Opening hours: Tuesday - Sunday at. 12:00 - 23:00 <br>The kitchen closes at. 22:00</p>
-        </div>
-        <div class="about">
-            <img src="/imgs/neonz.jpg" alt="neon">
-        </div>
-    </div>
 
     <footer class="footer-basic-centered">
         <p class="footer-company-motto">"Enjoy yourself. It's later than you think."</p>
@@ -143,9 +110,7 @@
         <p class="footer-company-name">Mr. Chao's &copy; 2018</p>
     </footer>
 
-
     <script>
-        //MENU LOGOET BLIVER MINDRE, NÅR MAN SCROLLER.
         window.onscroll = function() {
             growShrinkLogo()
         };
@@ -155,19 +120,15 @@
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 logoo.style.height = '100%';
             } else {
-                logoo.style.height = '140%';
+                logoo.style.height = '150%';
             }
         }
-        //VI DIFINERER DE FORSKELLIGE GLOBAGE VARIABLER, DER SKAL BRUGES I FLERE FUNKTIONER.
 
         let event,
             modtager = document.querySelector("#eventcontainer"),
-            retFilter = "alle",
+            retFilter = "everything",
             modal = document.querySelector("#modal");
         document.addEventListener("DOMContentLoaded", getJson);
-
-
-        //ASYNC FUNTIONEN HENTER VORES JSON OG VI HENTER OGSÅ NÆSTE FUNKTION VisRetter, efter.
 
         async function getJson() {
 
@@ -178,13 +139,10 @@
 
             visRetter();
         }
-        //EVENTLISTENERES PÅ ALLE KNAPPER, SOM KALDER FILTERINGS FUNKTIONEN VED CLICK.
-
+        //EVENTLISTENERES PÅ ALLE KNAPPER
         document.querySelectorAll(".menu-item").forEach(knap => {
             knap.addEventListener("click", filtrering)
         });
-
-        //FUNKTIONEN HENTER DATA-VÆRDIGEN, KATEGORI PÅ BUTTON MED CLASS MENU, HVILKET GIVER VARIABLEN retFilter.
 
         function filtrering() {
             modtager.textContent = "";
@@ -193,14 +151,11 @@
             console.log("filter");
         }
 
-        //LOKAL VARIABLE
-        //SÆTTER EVENTLISTENER MED CLICK PÅ RETTERNES BILLEDER OG KALDER VisModal.
-
         function visRetter() {
             let myTemplate = document.querySelector("#event-template");
             document.querySelector("#side_navn h1").textContent = retFilter;
             event.forEach(ret => {
-                if (ret.kategori == retFilter || retFilter == "alle") {
+                if (ret.kategori == retFilter || retFilter == "everything") {
                     console.log(myTemplate);
 
                     let klon = myTemplate.cloneNode(true).content;
@@ -231,6 +186,7 @@
         function skjulModal() {
 
             modal.classList.remove("vis");
+            //window.scrollTo(0);
         }
     </script>
 </body>

@@ -5,7 +5,7 @@
         "billede": "eggrolls",
         "beskrivelse": "Very popular in the west although not eaten in China, egg rolls are a larger, bulkier version of Spring rolls.",
         "kategori": "starters",
-        "pris": "38,-"
+        "pris": "38,- "
   },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "billede": "springrolls",
         "beskrivelse": "A lighter, more delicate version of egg rolls, made with a flour and water wrapper (no egg).  Like egg rolls, spring rolls are deep-fried.",
         "kategori": "starters",
-        "pris": "32,-"
+        "pris": "32,- "
   },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "billede": "ragoon",
         "beskrivelse": "The wontons are stuffed with crab, cream cheese and scallions before deep-frying.",
         "kategori": "starters",
-        "pris": "39,-"
+        "pris": "39,- "
   },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "billede": "wonton",
         "beskrivelse": "The word wonton translates into \"swallowing a cloud\" and in this dish the wontons floating in the soup do resemble tiny clouds.",
         "kategori": "starters",
-        "pris": "25,-"
+        "pris": "25,- "
   },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "billede": "crispyshred",
         "beskrivelse": "This dish is deep fried shredded beef coated with sweet chili sauce.",
         "kategori": "main",
-        "pris": "118,-"
+        "pris": "118,- "
   },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "billede": "prawns",
         "beskrivelse": "A version of this dish is deep-fried prawns coated with sweet and sour sauce.",
         "kategori": "main",
-        "pris": "110,-"
+        "pris": "110,- "
   },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "billede": "kingp",
         "beskrivelse": "King prawns, peas and carrot in egg fried rice. This fried rice dish could contain different vegetable including sweet corn, pepper or lettuce.",
         "kategori": "main",
-        "pris": "100,-"
+        "pris": "100,- "
   },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "billede": "bangbang",
         "beskrivelse": "Chicken breasts are cut into matchstick sized pieces and served on a sheet of green bean paste. Made with hot chili oil.",
         "kategori": "main",
-        "pris": "134,-"
+        "pris": "134,- "
   },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "billede": "chendu",
         "beskrivelse": "A classic Szechuan dish. Cubed chicken breasts are marinated and deep-fried; the sauce includes hot bean sauce, freshly ground Szechuan pepper and vinegar.",
         "kategori": "main",
-        "pris": "122,-"
+        "pris": "122,- "
   },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "billede": "douban",
         "beskrivelse": "Fish in Hot Sauce.",
         "kategori": "main",
-        "pris": "110,-"
+        "pris": "110,- "
   },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "billede": "kungpao",
         "beskrivelse": "Deep-fried diced chicken and roasted peanuts; a spicy dish made with chili peppers.",
         "kategori": "main",
-        "pris": "119,-"
+        "pris": "119,- "
   },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "billede": "beer",
         "beskrivelse": "The most recognized Chinese beer in the world, Tsingtao is sold in 62 countries. A lager with a high malt flavor and a hint of hops.",
         "kategori": "drinks",
-        "pris": "30,-"
+        "pris": "30,- "
   },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "billede": "the",
         "beskrivelse": "Chinese night owls love drinking this late night/early morning concoction while belting out Hong Kong and Korean pop songs at the karaoke bar.",
         "kategori": "drinks",
-        "pris": "28,-"
+        "pris": "28,- "
   },
     {
         "id": 14,
@@ -109,6 +109,6 @@
         "billede": "bubble",
         "beskrivelse": "One of the most popular soft drinks among young people in mainland China, this Taiwanese import includes jelly or pudding-like bubbles in sweetened milk tea.",
         "kategori": "drinks",
-        "pris": "35,-"
+        "pris": "35,- "
   }
 ]
